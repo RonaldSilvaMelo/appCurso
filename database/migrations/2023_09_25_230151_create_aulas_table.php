@@ -18,6 +18,9 @@ return new class extends Migration
             $table->string('urlaula');
             $table->timestamps();
             $table->foreign('idcurso')->references('id')->on('cursos');
+           // $table->foreignId('idcurso')->constrained(
+            //    table: 'cursos', indexName: 'idcurso'
+           // );
         });
     }
 

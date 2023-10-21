@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon" />
-  <title>PlainAdmin Demo | Bootstrap 5 Admin Template</title>
+  <title>Admin | Gerenciamento de Curso</title>
 
   <!-- ========== All CSS files linkup ========= -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -44,11 +44,11 @@
                 <path d="M17.0833 10C17.7737 10 18.3432 9.43708 18.2408 8.75433C17.7005 5.14918 14.8508 2.29947 11.2457 1.75912C10.5629 1.6568 10 2.2263 10 2.91665V9.16666C10 9.62691 10.3731 10 10.8333 10H17.0833Z" />
               </svg>
             </span>
-            <span class="text h5">Dashboard</span>
+            <span class="text h3">Dashboard</span>
           </a>
           <ul id="ddmenu_1" class="collapse show dropdown-nav">
             <li>
-              <a href="{{route('index')}}"> <span class="text"> eCommerce</span> </a>
+              <a href="{{route('index')}}" class="active"> <span class="text h4"> eCommerce</span> </a>
             </li>
           </ul>
         </li>
@@ -59,18 +59,18 @@
           <a href="#0" class="collapsed" data-bs-toggle="collapse" data-bs-target="#ddmenu_2" aria-controls="ddmenu_2" aria-expanded="false" aria-label="Toggle navigation">
             <span class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-folder-check" viewBox="0 0 16 16">
-  <path d="m.5 3 .04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2zm5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h5.672z"/>
+  <path d="m.5 3 .04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2zm5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672z"/>
   <path d="M15.854 10.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.707 0l-1.5-1.5a.5.5 0 0 1 .707-.708l1.146 1.147 2.646-2.647a.5.5 0 0 1 .708 0z"/>
 </svg>
             </span>
-            <span class="text h5">Categoria</span>
+            <span class="text h3">Categoria</span>
           </a>
           <ul id="ddmenu_2" class="collapse dropdown-nav">
             <li>
-              <a href="{{route('cadcategoria')}}"> <span class="text">Cadastrar </span></a>
+              <a href="{{route('form-cadastro-categoria')}}"> <span class="text h4">Cadastrar </span></a>
             </li>
             <li>
-              <a href="blank-page.html"> <span class="text">Gerenciar </span></a>
+              <a href=""> <span class="text h4">Gerenciar </span></a>
             </li>
           </ul>
         </li>
@@ -86,14 +86,14 @@
                 <path d="M5.205 10.787a7.632 7.632 0 0 0 1.804 1.352c-1.118 1.007-4.929 2.028-5.054 1.903-.126-.127.737-4.189 1.839-5.18.346.69.837 1.35 1.411 1.925Z" />
               </svg>
             </span>
-            <span class="text h5">Curso</span>
+            <span class="text h3">Curso</span>
           </a>
           <ul id="ddmenu_Curso" class="collapse dropdown-nav">
             <li>
-              <a href="settings.html"> <span class="text">Cadastrar </span> </a>
+              <a href="{{route('form-cadastro-curso')}}"> <span class="text h4">Cadastrar </span> </a>
             </li>
             <li>
-              <a href="blank-page.html"> <span class="text">Gerenciar</span> </a>
+              <a href="blank-page.html"> <span class="text h4">Gerenciar</span> </a>
             </li>
           </ul>
         </li>
@@ -109,14 +109,14 @@
                 <path d="M5.667 16C4.747 16 4 15.254 4 14.333v-1.86A5.985 5.985 0 0 1 2 8c0-1.777.772-3.374 2-4.472V1.667C4 .747 4.746 0 5.667 0h4.666C11.253 0 12 .746 12 1.667v1.86a5.99 5.99 0 0 1 1.918 3.48.502.502 0 0 1 .582.493v1a.5.5 0 0 1-.582.493A5.99 5.99 0 0 1 12 12.473v1.86c0 .92-.746 1.667-1.667 1.667H5.667zM13 8A5 5 0 1 0 3 8a5 5 0 0 0 10 0z" />
               </svg>
             </span>
-            <span class="text h5">Aula</span>
+            <span class="text h3">Aula</span>
           </a>
           <ul id="ddmenu_Aula" class="collapse dropdown-nav">
             <li>
-              <a href="settings.html"> <span class="text">Cadastrar</span> </a>
+              <a href="{{route('form-cadastro-aula')}}"> <span class="text h4">Cadastrar</span> </a>
             </li>
             <li>
-              <a href="blank-page.html"><span class="text"> Gerenciar</span> </a>
+              <a href="blank-page.html"><span class="text h4"> Gerenciar</span> </a>
             </li>
           </ul>
         </li>
