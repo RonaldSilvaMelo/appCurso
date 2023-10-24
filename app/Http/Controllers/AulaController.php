@@ -4,12 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
-use App\Models\Categoria;
+use App\Models\Aula;
 
 class AulaController extends Controller
 {
     public function mostrarFormAula(){
         return view('cad_aula');
+    }
+
+    public function mostrarManipulaAula(){
+        $registrosAula = Aula::All();
+
+        return view('manipula_aula',['registrosAula' => $registrosAula]);
     }
 
     public function index(){
@@ -18,12 +24,12 @@ class AulaController extends Controller
 
     public function cadastroAula(Request $request){
         $registrosAula = $request->validate([
-            'idcurso' => 'Integer|required',
+            'idcurso' => 'numeric|required',
             'tituloaula' => 'string|required',
             'urlaula' => 'string|required'
         ]);
 
-        Categoria::create($registrosAula);
+        Aula::create($registrosAula);
 
         return Redirect::route('index');
     }

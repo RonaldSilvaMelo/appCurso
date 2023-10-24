@@ -8,9 +8,15 @@ use App\Models\Categoria;
 
 class CategoriaController extends Controller
 {
-    //abri o formulario de cadastro
+    //abre o formulario de cadastro
     public function mostrarFormCat(){
         return view('cad_categoria');
+    }
+
+    public function mostrarManipulaCategoria(){
+        $registrosCategoria = Categoria::All();
+
+        return view('manipula_categoria',['registrosCategoria' => $registrosCategoria]);
     }
 
     public function index(){
