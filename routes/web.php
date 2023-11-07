@@ -36,6 +36,9 @@ Route::get('/alterar-curso/{registrosCurso}',[CursoController::class,'MostrarAlt
 
 //rota para deletar o curso
 Route::delete('/deletar-curso/{registrosCurso}',[CursoController::class,'DeletarCurso'])->name('deletar-curso');
+
+//rota para buscar por nome do curso
+Route::get('/buscacursonome',[CursoController::class,'BuscarCursoNome'])->name("busca-curso-nome");
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -50,4 +53,7 @@ Route::get('/alterar-aula/{registrosAula}',[AulaController::class,'MostrarAltera
 
 //rota para deletar a aula
 Route::delete('/deletar-aula/{registrosAula}',[AulaController::class,'DeletarAula'])->name('deletar-aula');
+
+//rota para buscar por nome da aula
+Route::get('/buscaaulanome',[AulaController::class,'BuscarAulaNome'])->name("busca-aula-nome");
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -45,7 +45,7 @@ class CursoController extends Controller
     public function BuscarCursoNome(Request $request){
         $registrosCurso = Curso::query();
         $registrosCurso->when($request->curso,function($query, $valor){
-            $query->where('curso','like','%',$valor,'%');
+            $query->where('nomecurso','like','%'.$valor.'%');
         });
         $registrosCurso = $registrosCurso->get();
         return view('manipula_curso',['registrosCurso' => $registrosCurso]);

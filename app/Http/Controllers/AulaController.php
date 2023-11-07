@@ -42,7 +42,7 @@ class AulaController extends Controller
     public function BuscarAulaNome(Request $request){
         $registrosAula = Aula::query();
         $registrosAula->when($request->aula,function($query, $valor){
-            $query->where('aula','like','%',$valor,'%');
+            $query->where('tituloaula','like','%'.$valor.'%');
         });
         $registrosAula = $registrosAula->get();
         return view('manipula_aula',['registrosAula' => $registrosAula]);
