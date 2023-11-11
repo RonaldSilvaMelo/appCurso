@@ -50,4 +50,13 @@ class CursoController extends Controller
         $registrosCurso = $registrosCurso->get();
         return view('manipula_curso',['registrosCurso' => $registrosCurso]);
     }
+
+    public function MostrarAlterarCurso(Curso $registrosCurso){
+        //$registrosCurso = Curso::All();
+        return view('altera_curso',['registrosCurso' => $registrosCurso]);
+    }
+
+    public function AlterarBancoCurso(){
+
+    }
 }

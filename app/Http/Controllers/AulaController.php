@@ -47,4 +47,13 @@ class AulaController extends Controller
         $registrosAula = $registrosAula->get();
         return view('manipula_aula',['registrosAula' => $registrosAula]);
     }
+
+    public function MostrarAlterarAula(Aula $registrosAula){
+        //$registrosAula = Aula::All();
+        return view('altera_aula',['registrosAula' => $registrosAula]);
+    }
+
+    public function AlterarBancoAula(){
+
+    }
 }
