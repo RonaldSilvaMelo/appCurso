@@ -58,9 +58,9 @@ class CategoriaController extends Controller
             'nomecategoria' => 'string|required'
         ]);
 
-        //$registrosCategoria->id;
-
-        $registrosCategoria->save($registrosCat);
+        //Esta linha é que altera o registro no banco.
+        $registrosCat->fill($registros);
+        $registrosCat->save();
         
         //alert("Dados alterados com sucesso!");
         return Redirect::route('manipula-categoria');

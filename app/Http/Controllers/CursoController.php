@@ -57,6 +57,19 @@ class CursoController extends Controller
     }
 
     public function AlterarBancoCurso(){
+        $registros = $request->validate([
+            'nomecurso' => 'string|required',
+            'cargahoraria' => 'string|required',
+            'idcategoria' => 'required',
+            'valor' => 'numeric|required'
+        ]);
 
+        //Esta linha é que altera o registro no banco.
+        $registrosCurso->fill($registros);
+        $registrosCurso->save();
+
+
+       //alert("Dados alterados com sucesso");
+       return Redirect::route('manipula-aula');
     }
 }

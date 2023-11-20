@@ -53,7 +53,19 @@ class AulaController extends Controller
         return view('altera_aula',['registrosAula' => $registrosAula]);
     }
 
-    public function AlterarBancoAula(){
+    public function AlterarBancoAula(Aula $registrosAula, Request $request){
+        $registros = $request->validate([
+            'idcurso' => 'required',
+            'tituloaula' => 'string|required',
+            'urlaula' => 'string|required',
+           ]);
 
+        //Esta linha é que altera o registro no banco.
+         $registrosAula->fill($registros);
+         $registrosAula->save();
+
+
+        //alert("Dados alterados com sucesso");
+        return Redirect::route('manipula-aula');
     }
 }
